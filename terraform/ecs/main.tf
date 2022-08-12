@@ -189,8 +189,6 @@ resource "aws_autoscaling_notification" "asg_notifications" {
 resource "aws_cloudwatch_log_group" "awslogs-aws-devsecops-demo" {
   name = "awslogs-aws-devsecops-demo"
   tags = {
-    team  = "devrel marketing"
-    owner = "Angel Rivera"
   }
 }
 

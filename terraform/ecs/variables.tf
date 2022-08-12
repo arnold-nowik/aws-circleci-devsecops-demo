@@ -14,11 +14,6 @@ variable "key_pair" {
   default     = "DevSecOpsCICDDemo"
 }
 
-variable "ami" {
-  description = "Amazon Linux 2 AMI x86"
-  default     = "ami-01cc34ab2709337aa"
-}
-
 variable "instance_type" {
   description = "AWS Instance Type"
   default     = "t3.small"
@@ -31,7 +26,7 @@ variable "iam_profile" {
 
 variable "asg_min" {
   description = "Min Instances"
-  default     = 0
+  default     = 1
 }
 
 variable "asg_max" {

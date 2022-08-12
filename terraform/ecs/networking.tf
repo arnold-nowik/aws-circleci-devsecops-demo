@@ -3,9 +3,6 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
-    Name  = "DevRel ARM VPC",
-    owner = "Angel Rivera",
-    team  = "DevRel Marketing"
   }
 }
 
@@ -18,9 +15,6 @@ resource "aws_subnet" "pub_subnet_a" {
   cidr_block        = "10.0.0.0/24"
   availability_zone = "us-east-1a"
   tags = {
-    Name  = "subnet-east1-a",
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera",
   }
 }
 
@@ -31,8 +25,6 @@ resource "aws_subnet" "pub_subnet_b" {
 
   tags = {
     Name  = "subnet-east1-b",
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera"
   }
 }
 
@@ -44,8 +36,6 @@ resource "aws_route_table" "public" {
     gateway_id = aws_internet_gateway.internet_gateway.id
   }
   tags = {
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera"
   }
 }
 
@@ -82,8 +72,6 @@ resource "aws_security_group" "aws-devsecops-demo-22" {
   }
   tags = {
     Name  = "aws-devsecops-demo-22-SSH",
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera"
   }
 }
 
@@ -110,8 +98,6 @@ resource "aws_security_group" "aws-devsecops-demo-ELB" {
   }
   tags = {
     Name  = "aws-devsecops-demo-443-ELB",
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera"
   }
 }
 
