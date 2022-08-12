@@ -250,7 +250,7 @@ resource "aws_ecs_service" "aws-devsecops-demo-v8" {
   name                               = "srv_aws-devsecops-demo-v8"
   cluster                            = aws_ecs_cluster.aws-devsecops-demo-v8.name
   desired_count                      = var.ecs_desired_count
-  deployment_minimum_healthy_percent = 50
+  deployment_minimum_healthy_percent = 0
   deployment_maximum_percent         = 100
   task_definition                    = aws_ecs_task_definition.aws-devsecops-demo-v8.arn
   load_balancer {
