@@ -16,7 +16,7 @@ variable "key_pair" {
 
 variable "instance_type" {
   description = "AWS Instance Type"
-  default     = "t3.small"
+  default     = "t3.medium"
 }
 
 variable "iam_profile" {
