@@ -1,6 +1,6 @@
 [
   {
-    "memory": 3072,
+    "memory": 2048,
     "portMappings": [
       {
           "hostPort": 80,
