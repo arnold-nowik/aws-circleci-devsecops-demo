@@ -11,7 +11,7 @@ variable "availability_zones" {
 
 variable "key_pair" {
   description = "AWS EC2 Key Pair Pem"
-  default     = "<Add Your AWS Key Pair Here>"
+  default     = "DevSecOpsCICDDemo"
 }
 
 variable "ami" {
@@ -21,7 +21,7 @@ variable "ami" {
 
 variable "instance_type" {
   description = "AWS Instance Type"
-  default     = "t3.medium"
+  default     = "t3.small"
 }
 
 variable "iam_profile" {
@@ -31,17 +31,17 @@ variable "iam_profile" {
 
 variable "asg_min" {
   description = "Min Instances"
-  default     = 3
+  default     = 0
 }
 
 variable "asg_max" {
   description = "Max Instances"
-  default     = 5
+  default     = 1
 }
 
 variable "asg_desired" {
   description = "AWS Desired capacity for ASG"
-  default     = 3
+  default     = 1
 }
 
 variable "docker_img_name" {
@@ -58,6 +58,6 @@ variable "docker_img_tag" {
 
 variable "ecs_desired_count" {
   description = "Number of desired ECS Tasks to deploy"
-  default     = 3
+  default     = 1
 }
 

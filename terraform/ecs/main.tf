@@ -66,7 +66,7 @@ resource "aws_launch_configuration" "app" {
     aws_security_group.aws-devsecops-demo-ELB-HTTP80.id
   ]
   key_name                    = var.key_pair
-  image_id                    = var.ami
+  image_id                    = data.aws_ami.amazon_linux2_ecs.id
   instance_type               = var.instance_type
   iam_instance_profile        = aws_iam_instance_profile.ecs_agent.name
   user_data                   = data.template_file.user_data.rendered
@@ -222,8 +222,6 @@ resource "aws_alb" "main" {
     aws_security_group.aws-devsecops-demo-ELB-HTTP80.id,
   ]
   tags = {
-    team  = "DevRel Marketing",
-    owner = "Angel Rivera"
   }
 }
 
